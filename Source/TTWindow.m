@@ -1,5 +1,5 @@
 //
-//  TTTopWindow.m
+//  TTWindow.m
 //  ThatKit
 //
 //  Created by Tyson Leslie on 2014-03-04.
