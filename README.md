@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 Add a shake gesture callback to display a debug console or something else app-specific
 
 > Add it to `didFinishLaunchingWithOptions` in your AppDelegate if you're overriding the default UIWindow
+
 ```swift
 (self.window as! TTWindow).shakeGestureCallback = { () -> Void in
     //Display something on shake
