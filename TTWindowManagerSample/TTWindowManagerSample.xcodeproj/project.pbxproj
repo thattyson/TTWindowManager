@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F64A8391B3B1F1D002D2BE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8381B3B1F1D002D2BE1 /* AppDelegate.swift */; };
+		8F64A83E1B3B1F1D002D2BE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F64A83C1B3B1F1D002D2BE1 /* Main.storyboard */; };
+		8F64A8401B3B1F1D002D2BE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F64A83F1B3B1F1D002D2BE1 /* Images.xcassets */; };
+		8F64A8431B3B1F1D002D2BE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F64A8411B3B1F1D002D2BE1 /* LaunchScreen.xib */; };
+		8F64A84F1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A84E1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.swift */; };
+		8F64A85A1B3B1F4F002D2BE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8581B3B1F4F002D2BE1 /* ViewController.swift */; };
+		8F64A85B1B3B1F4F002D2BE1 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8591B3B1F4F002D2BE1 /* ModalViewController.swift */; };
+		8F64A8681B3B20E1002D2BE1 /* TTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8651B3B20E1002D2BE1 /* TTWindow.m */; };
+		8F64A8691B3B20E1002D2BE1 /* TTWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8671B3B20E1002D2BE1 /* TTWindowManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F64A8491B3B1F1D002D2BE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F64A82B1B3B1F1D002D2BE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F64A8321B3B1F1D002D2BE1;
+			remoteInfo = TTWindowManagerSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F64A8331B3B1F1D002D2BE1 /* TTWindowManagerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTWindowManagerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F64A8371B3B1F1D002D2BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F64A8381B3B1F1D002D2BE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F64A83D1B3B1F1D002D2BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F64A83F1B3B1F1D002D2BE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F64A8421B3B1F1D002D2BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8F64A8481B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTWindowManagerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F64A84D1B3B1F1D002D2BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F64A84E1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTWindowManagerSampleTests.swift; sourceTree = "<group>"; };
+		8F64A8581B3B1F4F002D2BE1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F64A8591B3B1F4F002D2BE1 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		8F64A8601B3B1FB7002D2BE1 /* TTWindowManagerSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTWindowManagerSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		8F64A8641B3B20E1002D2BE1 /* TTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTWindow.h; path = ../../TTWindowManager/TTWindow.h; sourceTree = "<group>"; };
+		8F64A8651B3B20E1002D2BE1 /* TTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTWindow.m; path = ../../TTWindowManager/TTWindow.m; sourceTree = "<group>"; };
+		8F64A8661B3B20E1002D2BE1 /* TTWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTWindowManager.h; path = ../../TTWindowManager/TTWindowManager.h; sourceTree = "<group>"; };
+		8F64A8671B3B20E1002D2BE1 /* TTWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTWindowManager.m; path = ../../TTWindowManager/TTWindowManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F64A8301B3B1F1D002D2BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F64A8451B3B1F1D002D2BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F64A82A1B3B1F1D002D2BE1 = {
+			isa = PBXGroup;
+			children = (
+				8F64A8351B3B1F1D002D2BE1 /* TTWindowManagerSample */,
+				8F64A84B1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests */,
+				8F64A8341B3B1F1D002D2BE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F64A8341B3B1F1D002D2BE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F64A8331B3B1F1D002D2BE1 /* TTWindowManagerSample.app */,
+				8F64A8481B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F64A8351B3B1F1D002D2BE1 /* TTWindowManagerSample */ = {
+			isa = PBXGroup;
+			children = (
+				8F64A86A1B3B20ED002D2BE1 /* TTWindowManager */,
+				8F64A8381B3B1F1D002D2BE1 /* AppDelegate.swift */,
+				8F64A8581B3B1F4F002D2BE1 /* ViewController.swift */,
+				8F64A8591B3B1F4F002D2BE1 /* ModalViewController.swift */,
+				8F64A83C1B3B1F1D002D2BE1 /* Main.storyboard */,
+				8F64A83F1B3B1F1D002D2BE1 /* Images.xcassets */,
+				8F64A8411B3B1F1D002D2BE1 /* LaunchScreen.xib */,
+				8F64A8361B3B1F1D002D2BE1 /* Supporting Files */,
+				8F64A8601B3B1FB7002D2BE1 /* TTWindowManagerSample-Bridging-Header.h */,
+			);
+			path = TTWindowManagerSample;
+			sourceTree = "<group>";
+		};
+		8F64A8361B3B1F1D002D2BE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F64A8371B3B1F1D002D2BE1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F64A84B1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F64A84E1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.swift */,
+				8F64A84C1B3B1F1D002D2BE1 /* Supporting Files */,
+			);
+			path = TTWindowManagerSampleTests;
+			sourceTree = "<group>";
+		};
+		8F64A84C1B3B1F1D002D2BE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F64A84D1B3B1F1D002D2BE1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F64A86A1B3B20ED002D2BE1 /* TTWindowManager */ = {
+			isa = PBXGroup;
+			children = (
+				8F64A8641B3B20E1002D2BE1 /* TTWindow.h */,
+				8F64A8651B3B20E1002D2BE1 /* TTWindow.m */,
+				8F64A8661B3B20E1002D2BE1 /* TTWindowManager.h */,
+				8F64A8671B3B20E1002D2BE1 /* TTWindowManager.m */,
+			);
+			name = TTWindowManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F64A8321B3B1F1D002D2BE1 /* TTWindowManagerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F64A8521B3B1F1D002D2BE1 /* Build configuration list for PBXNativeTarget "TTWindowManagerSample" */;
+			buildPhases = (
+				8F64A82F1B3B1F1D002D2BE1 /* Sources */,
+				8F64A8301B3B1F1D002D2BE1 /* Frameworks */,
+				8F64A8311B3B1F1D002D2BE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTWindowManagerSample;
+			productName = TTWindowManagerSample;
+			productReference = 8F64A8331B3B1F1D002D2BE1 /* TTWindowManagerSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F64A8471B3B1F1D002D2BE1 /* TTWindowManagerSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F64A8551B3B1F1D002D2BE1 /* Build configuration list for PBXNativeTarget "TTWindowManagerSampleTests" */;
+			buildPhases = (
+				8F64A8441B3B1F1D002D2BE1 /* Sources */,
+				8F64A8451B3B1F1D002D2BE1 /* Frameworks */,
+				8F64A8461B3B1F1D002D2BE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F64A84A1B3B1F1D002D2BE1 /* PBXTargetDependency */,
+			);
+			name = TTWindowManagerSampleTests;
+			productName = TTWindowManagerSampleTests;
+			productReference = 8F64A8481B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F64A82B1B3B1F1D002D2BE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = thattyson;
+				TargetAttributes = {
+					8F64A8321B3B1F1D002D2BE1 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					8F64A8471B3B1F1D002D2BE1 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 8F64A8321B3B1F1D002D2BE1;
+					};
+				};
+			};
+			buildConfigurationList = 8F64A82E1B3B1F1D002D2BE1 /* Build configuration list for PBXProject "TTWindowManagerSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F64A82A1B3B1F1D002D2BE1;
+			productRefGroup = 8F64A8341B3B1F1D002D2BE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F64A8321B3B1F1D002D2BE1 /* TTWindowManagerSample */,
+				8F64A8471B3B1F1D002D2BE1 /* TTWindowManagerSampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F64A8311B3B1F1D002D2BE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F64A83E1B3B1F1D002D2BE1 /* Main.storyboard in Resources */,
+				8F64A8431B3B1F1D002D2BE1 /* LaunchScreen.xib in Resources */,
+				8F64A8401B3B1F1D002D2BE1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F64A8461B3B1F1D002D2BE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F64A82F1B3B1F1D002D2BE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F64A85A1B3B1F4F002D2BE1 /* ViewController.swift in Sources */,
+				8F64A8681B3B20E1002D2BE1 /* TTWindow.m in Sources */,
+				8F64A85B1B3B1F4F002D2BE1 /* ModalViewController.swift in Sources */,
+				8F64A8391B3B1F1D002D2BE1 /* AppDelegate.swift in Sources */,
+				8F64A8691B3B20E1002D2BE1 /* TTWindowManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F64A8441B3B1F1D002D2BE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F64A84F1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F64A84A1B3B1F1D002D2BE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F64A8321B3B1F1D002D2BE1 /* TTWindowManagerSample */;
+			targetProxy = 8F64A8491B3B1F1D002D2BE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F64A83C1B3B1F1D002D2BE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F64A83D1B3B1F1D002D2BE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F64A8411B3B1F1D002D2BE1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F64A8421B3B1F1D002D2BE1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F64A8501B3B1F1D002D2BE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F64A8511B3B1F1D002D2BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F64A8531B3B1F1D002D2BE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = TTWindowManagerSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TTWindowManagerSample/TTWindowManagerSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F64A8541B3B1F1D002D2BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = TTWindowManagerSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TTWindowManagerSample/TTWindowManagerSample-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		8F64A8561B3B1F1D002D2BE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TTWindowManagerSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTWindowManagerSample.app/TTWindowManagerSample";
+			};
+			name = Debug;
+		};
+		8F64A8571B3B1F1D002D2BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TTWindowManagerSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTWindowManagerSample.app/TTWindowManagerSample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F64A82E1B3B1F1D002D2BE1 /* Build configuration list for PBXProject "TTWindowManagerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F64A8501B3B1F1D002D2BE1 /* Debug */,
+				8F64A8511B3B1F1D002D2BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F64A8521B3B1F1D002D2BE1 /* Build configuration list for PBXNativeTarget "TTWindowManagerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F64A8531B3B1F1D002D2BE1 /* Debug */,
+				8F64A8541B3B1F1D002D2BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8F64A8551B3B1F1D002D2BE1 /* Build configuration list for PBXNativeTarget "TTWindowManagerSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F64A8561B3B1F1D002D2BE1 /* Debug */,
+				8F64A8571B3B1F1D002D2BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F64A82B1B3B1F1D002D2BE1 /* Project object */;
+}

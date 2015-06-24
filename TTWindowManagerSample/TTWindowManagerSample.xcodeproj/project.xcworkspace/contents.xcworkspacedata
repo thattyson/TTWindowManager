@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TTWindowManager Example.xcodeproj">
+      location = "self:TTWindowManagerSample.xcodeproj">
    </FileRef>
 </Workspace>

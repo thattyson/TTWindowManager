@@ -9,10 +9,15 @@ A simple window presentation manager for iOS written in objective-c which takes 
 
 > I wrote TTWindowManager before swift existed. 
 > I haven't converted it but have now fully embraced swift so I'm exclusively showing swift implementation.
-> Add `#import TTWindowManager.h` to your bridging header and code away!
 
+## Installation
 
-### Implementation (swift)
+### Manually
+
+* Drag `TTWindowManager/TTWindowManager` folder into your project.
+* If using swift, add `#import TTWindowManager.h` to your bridging header and code away!
+
+## Implementation (swift)
 
 Override the main `UIWindow` in your AppDelegate with a `TTWindow` to take full advantage of the stack.
 

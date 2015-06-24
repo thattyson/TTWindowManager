@@ -13,10 +13,7 @@ typedef enum {
     TTAnimationDirectionPop
 }TTAnimationDirection;
 
-@interface TTWindowManager () {
-    BOOL _isDisplayingWindow;
-    
-}
+@interface TTWindowManager ()
 
 @property (nonatomic, strong) NSMutableDictionary *windows;
 @property (nonatomic, strong) TTWindow *backgroundAnimationWindow;
@@ -137,6 +134,7 @@ typedef enum {
 
 #pragma mark - Animation
 
+//TODO: add an optional image for the background view instead of strictly black
 - (TTWindow *)backgroundAnimationWindow {
     
     if (!_backgroundAnimationWindow) {

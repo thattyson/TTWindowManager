@@ -1,15 +1,15 @@
 //
-//  TTWindowManager_ExampleTests.swift
-//  TTWindowManager ExampleTests
+//  TTWindowManagerSampleTests.swift
+//  TTWindowManagerSampleTests
 //
-//  Created by Tyson Leslie on 2015-06-23.
+//  Created by Tyson Leslie on 2015-06-24.
 //  Copyright (c) 2015 thattyson. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class TTWindowManager_ExampleTests: XCTestCase {
+class TTWindowManagerSampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
