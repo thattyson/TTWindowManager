@@ -12,6 +12,14 @@ A simple window presentation manager for iOS written in objective-c which takes 
 
 ## Installation
 
+### Cocoapods
+
+Add the following to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
+
+```ruby
+pod 'TTWindowManager'
+```
+
 ### Manually
 
 * Drag `TTWindowManager/TTWindowManager` folder into your project.
