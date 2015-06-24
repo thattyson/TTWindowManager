@@ -54,7 +54,7 @@ typedef enum {
     TTWindow *windowToPresent = [self windowForPosition:position];
     windowToPresent.animationType = animation;
     
-    NSAssert(![windowToPresent isPresented], @"Attempting to display %@ when a viewController is already being displayed for window position %i", viewController, position);
+    NSAssert(![windowToPresent isPresented], @"Attempting to display %@ when a viewController is already being displayed for window position %lu", viewController, position);
     
     windowToPresent.rootViewController = viewController;
     [self displayWindow:windowToPresent completion:completion];
@@ -86,7 +86,7 @@ typedef enum {
     
     if (self.windows[[self.class keyForWindowPosition:position]]) {
         
-        return self.windows[[NSString stringWithFormat:@"%i", position]];
+        return self.windows[[NSString stringWithFormat:@"%lu", (unsigned long)position]];
     }
     
     TTWindow *newWindow = [[TTWindow alloc]initWithWindowPosition:position];
@@ -97,7 +97,7 @@ typedef enum {
 
 + (NSString*)keyForWindowPosition:(TTWindowPosition)position {
     
-    return [NSString stringWithFormat:@"%i", position];
+    return [NSString stringWithFormat:@"%lu", (unsigned long)position];
 }
 
 - (NSMutableDictionary *)windows {

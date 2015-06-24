@@ -43,7 +43,7 @@ Add a shake gesture callback to display a debug console or something else app-sp
 
 Quickly present a new TTWindow with an animation and at a specific window level
 ```swift
-TTWindowManager.sharedInstance().presentViewController(viewController, atWindowPosition: TTWindowPositionModal, withAnimation: TTWindowAnimationTypeModal) { (success) -> Void in
+TTWindowManager.sharedInstance().presentViewController(viewController, atWindowPosition: .Modal, withAnimation: .Modal) { (success) -> Void in
             
 }
 ```

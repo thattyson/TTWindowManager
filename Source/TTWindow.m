@@ -48,6 +48,9 @@
     [self setWindowLevel:[self.class windowLevelForPosition:_windowPosition]];
 }
 
+/*!
+ Translation method to return UIWindowLevel values from TTWindowPosition enum
+ */
 + (UIWindowLevel)windowLevelForPosition:(TTWindowPosition)position {
     
     switch (position) {
@@ -60,6 +63,14 @@
             break;
             
         case TTWindowPositionDebug:
+            return UIWindowLevelStatusBar + 1;
+            break;
+            
+        case TTWindowPositionAlert:
+            return UIWindowLevelAlert + 1;
+            break;
+            
+        case TTWindowPositionStatusBar:
             return UIWindowLevelStatusBar + 1;
             break;
             

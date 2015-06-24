@@ -18,6 +18,6 @@ class ModalViewController: UIViewController {
 
     
     @IBAction func closeButtonTapped(sender: AnyObject) {
-        TTWindowManager.sharedInstance().dismissViewControllerAtWindowPosition(TTWindowPositionModal)
+        TTWindowManager.sharedInstance().dismissViewControllerAtWindowPosition(.Modal)
     }
 }

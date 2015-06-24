@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController: UIViewController! = storyboard.instantiateViewControllerWithIdentifier("ModalViewController") as! UIViewController
         
-        TTWindowManager.sharedInstance().presentViewController(viewController, atWindowPosition: TTWindowPositionModal, withAnimation: TTWindowAnimationTypeModal) { (success) -> Void in
+        TTWindowManager.sharedInstance().presentViewController(viewController, atWindowPosition: .Modal, withAnimation: .Modal) { (success) -> Void in
             
         }
     }
