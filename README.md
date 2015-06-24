@@ -1,5 +1,11 @@
 # TTWindowManager
-A simple window presentation manager for iOS written in objective-c which takes advantage of `UIWindow`
+A simple window presentation manager for iOS written in objective-c which takes advantage of `UIWindow`.
+
+`UIWindow` can present any `UIViewController` subclass as a rootViewController. Normally an **entire app** is confined within a single `UIWindow`. This manager allows you to create many `TTWindow` objects with different z positions for some truly creative UI!
+* Present a view above the `UIStatusBar` easily!
+* Create Apple-like Alerts that present above every UI element
+* Create a HUD that displays above navigation bars and tabbars!
+* Add a shake gesture recognizer with just one line of code
 
 > I wrote TTWindowManager before swift existed. 
 > I haven't converted it but have now fully embraced swift so I'm exclusively showing swift implementation.
