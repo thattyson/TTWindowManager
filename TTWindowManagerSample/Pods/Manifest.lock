@@ -1,0 +1,10 @@
+PODS:
+  - TTWindowManager (0.0.1)
+
+DEPENDENCIES:
+  - TTWindowManager
+
+SPEC CHECKSUMS:
+  TTWindowManager: 717bbfe647a61dfd7aa03f8a121e3b8f4208d9f4
+
+COCOAPODS: 0.37.2

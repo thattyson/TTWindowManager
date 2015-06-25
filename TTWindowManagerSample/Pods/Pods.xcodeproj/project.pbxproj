@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CE487AFA00D980613232205 /* Pods-TTWindowManagerSample-TTWindowManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AA14DA6804A090CB4B573 /* Pods-TTWindowManagerSample-TTWindowManager-dummy.m */; };
+		1B0B7F6CF78430917F031BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC41307C5EC38213E6CA7EF /* Foundation.framework */; };
+		4C5AB34103280E7E96F9D3E0 /* TTWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E040113FE35A843FC074D6E4 /* TTWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		957952780A0969A683A84715 /* TTWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F65D151483C13B31AE00EED2 /* TTWindowManager.m */; };
+		A06C60FC8C38D44526577CED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC41307C5EC38213E6CA7EF /* Foundation.framework */; };
+		A8E038C0D7F247E3A0FBBE72 /* Pods-TTWindowManagerSample-TTWindowManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 344EA9E2661340CF0C5A340B /* Pods-TTWindowManagerSample-TTWindowManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6033A91C28C2E5DC795B5B7 /* Pods-TTWindowManagerSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FC1A5F2C269CEC9DF7563 /* Pods-TTWindowManagerSample-dummy.m */; };
+		C231C07E22219FED194A2EA6 /* TTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6A3F09AC9D9A7734F7C1E9 /* TTWindow.m */; };
+		E6A85284A03F01BFD0A0B0F4 /* Pods-TTWindowManagerSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D9F2E72F80472EB17443493 /* Pods-TTWindowManagerSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFDA4861866179D0C1FDD8CF /* TTWindowManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CFD9B2FF7609A866CC9D1162 /* TTWindowManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84ECBCE1172394FF8C622AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7CDFF1D3E1ED50EAE73C181 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABFA6B66047AD7A67356D301;
+			remoteInfo = "Pods-TTWindowManagerSample-TTWindowManager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03195C0445889903882C6A49 /* Pods-TTWindowManagerSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTWindowManagerSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		043AA14DA6804A090CB4B573 /* Pods-TTWindowManagerSample-TTWindowManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTWindowManagerSample-TTWindowManager-dummy.m"; sourceTree = "<group>"; };
+		344EA9E2661340CF0C5A340B /* Pods-TTWindowManagerSample-TTWindowManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTWindowManagerSample-TTWindowManager-umbrella.h"; sourceTree = "<group>"; };
+		405A2D64036208683E37CD3B /* TTWindowManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTWindowManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41326914CEF75B2E371EB98B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		42830AADF78789C4CE8CCC11 /* Pods-TTWindowManagerSample-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTWindowManagerSample-environment.h"; sourceTree = "<group>"; };
+		477FA0D765668F35FD843031 /* Pods-TTWindowManagerSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TTWindowManagerSample.modulemap"; sourceTree = "<group>"; };
+		4D9F2E72F80472EB17443493 /* Pods-TTWindowManagerSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTWindowManagerSample-umbrella.h"; sourceTree = "<group>"; };
+		518B32258E1D6CEEEAEA86D7 /* Pods-TTWindowManagerSample-TTWindowManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTWindowManagerSample-TTWindowManager.xcconfig"; sourceTree = "<group>"; };
+		51D9FA972726707CB1B2E021 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60E5923CC00345F0C99581CA /* Pods-TTWindowManagerSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTWindowManagerSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		647FA8C63A2C29ADA3D94FC9 /* Pods-TTWindowManagerSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTWindowManagerSample.release.xcconfig"; sourceTree = "<group>"; };
+		6D87F5B2BAD45D3408BA06E7 /* Pods-TTWindowManagerSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTWindowManagerSample-frameworks.sh"; sourceTree = "<group>"; };
+		7EC77190CB31BDC26FF13884 /* Pods-TTWindowManagerSample-TTWindowManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TTWindowManagerSample-TTWindowManager.modulemap"; sourceTree = "<group>"; };
+		9123D0835106D3B18797B34A /* Pods-TTWindowManagerSample-TTWindowManager-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTWindowManagerSample-TTWindowManager-Private.xcconfig"; sourceTree = "<group>"; };
+		932364D5BDF4DC91E8E8B509 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9616CEE71DF180475B76BA6D /* Pods-TTWindowManagerSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTWindowManagerSample.debug.xcconfig"; sourceTree = "<group>"; };
+		A60FC1A5F2C269CEC9DF7563 /* Pods-TTWindowManagerSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTWindowManagerSample-dummy.m"; sourceTree = "<group>"; };
+		AE6A3F09AC9D9A7734F7C1E9 /* TTWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTWindow.m; path = TTWindowManager/TTWindow.m; sourceTree = "<group>"; };
+		CFD9B2FF7609A866CC9D1162 /* TTWindowManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTWindowManager.h; path = TTWindowManager/TTWindowManager.h; sourceTree = "<group>"; };
+		DE4A27AB8DC26E2FE46AFA83 /* Pods-TTWindowManagerSample-TTWindowManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTWindowManagerSample-TTWindowManager-prefix.pch"; sourceTree = "<group>"; };
+		DFC41307C5EC38213E6CA7EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E040113FE35A843FC074D6E4 /* TTWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTWindow.h; path = TTWindowManager/TTWindow.h; sourceTree = "<group>"; };
+		E2FA35DFE556ECE306559D31 /* Pods_TTWindowManagerSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTWindowManagerSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7387DD985B2F40DC38D7FF9 /* Pods-TTWindowManagerSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTWindowManagerSample-resources.sh"; sourceTree = "<group>"; };
+		F65D151483C13B31AE00EED2 /* TTWindowManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTWindowManager.m; path = TTWindowManager/TTWindowManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F52CA7712AA9AE8C7339555 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A06C60FC8C38D44526577CED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		463937BC10D4F8924D3764D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B0B7F6CF78430917F031BBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03BF86B90947528D298927A2 /* TTWindowManager */ = {
+			isa = PBXGroup;
+			children = (
+				E040113FE35A843FC074D6E4 /* TTWindow.h */,
+				AE6A3F09AC9D9A7734F7C1E9 /* TTWindow.m */,
+				CFD9B2FF7609A866CC9D1162 /* TTWindowManager.h */,
+				F65D151483C13B31AE00EED2 /* TTWindowManager.m */,
+				56DAB9CCE9FCDCF458CA97CC /* Support Files */,
+			);
+			path = TTWindowManager;
+			sourceTree = "<group>";
+		};
+		56DAB9CCE9FCDCF458CA97CC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				932364D5BDF4DC91E8E8B509 /* Info.plist */,
+				7EC77190CB31BDC26FF13884 /* Pods-TTWindowManagerSample-TTWindowManager.modulemap */,
+				518B32258E1D6CEEEAEA86D7 /* Pods-TTWindowManagerSample-TTWindowManager.xcconfig */,
+				9123D0835106D3B18797B34A /* Pods-TTWindowManagerSample-TTWindowManager-Private.xcconfig */,
+				043AA14DA6804A090CB4B573 /* Pods-TTWindowManagerSample-TTWindowManager-dummy.m */,
+				DE4A27AB8DC26E2FE46AFA83 /* Pods-TTWindowManagerSample-TTWindowManager-prefix.pch */,
+				344EA9E2661340CF0C5A340B /* Pods-TTWindowManagerSample-TTWindowManager-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TTWindowManagerSample-TTWindowManager";
+			sourceTree = "<group>";
+		};
+		6C82AEF611A00D81C6961A87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA35DFE556ECE306559D31 /* Pods_TTWindowManagerSample.framework */,
+				405A2D64036208683E37CD3B /* TTWindowManager.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70D21C316C28965394C528C9 = {
+			isa = PBXGroup;
+			children = (
+				41326914CEF75B2E371EB98B /* Podfile */,
+				B8C50685D861CCF7755652D2 /* Frameworks */,
+				81DF74164BB9CDD1D8289C4F /* Pods */,
+				6C82AEF611A00D81C6961A87 /* Products */,
+				B51D7AB170C0D3B640AFCCBF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81DF74164BB9CDD1D8289C4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03BF86B90947528D298927A2 /* TTWindowManager */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9BEE6C51F1BD2E4517698B86 /* Pods-TTWindowManagerSample */ = {
+			isa = PBXGroup;
+			children = (
+				51D9FA972726707CB1B2E021 /* Info.plist */,
+				477FA0D765668F35FD843031 /* Pods-TTWindowManagerSample.modulemap */,
+				03195C0445889903882C6A49 /* Pods-TTWindowManagerSample-acknowledgements.markdown */,
+				60E5923CC00345F0C99581CA /* Pods-TTWindowManagerSample-acknowledgements.plist */,
+				A60FC1A5F2C269CEC9DF7563 /* Pods-TTWindowManagerSample-dummy.m */,
+				42830AADF78789C4CE8CCC11 /* Pods-TTWindowManagerSample-environment.h */,
+				6D87F5B2BAD45D3408BA06E7 /* Pods-TTWindowManagerSample-frameworks.sh */,
+				E7387DD985B2F40DC38D7FF9 /* Pods-TTWindowManagerSample-resources.sh */,
+				4D9F2E72F80472EB17443493 /* Pods-TTWindowManagerSample-umbrella.h */,
+				9616CEE71DF180475B76BA6D /* Pods-TTWindowManagerSample.debug.xcconfig */,
+				647FA8C63A2C29ADA3D94FC9 /* Pods-TTWindowManagerSample.release.xcconfig */,
+			);
+			name = "Pods-TTWindowManagerSample";
+			path = "Target Support Files/Pods-TTWindowManagerSample";
+			sourceTree = "<group>";
+		};
+		B51D7AB170C0D3B640AFCCBF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE6C51F1BD2E4517698B86 /* Pods-TTWindowManagerSample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B8C50685D861CCF7755652D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CACBCF7D83F04B5578E16811 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CACBCF7D83F04B5578E16811 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DFC41307C5EC38213E6CA7EF /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5A2491997ACA58703793E34A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A85284A03F01BFD0A0B0F4 /* Pods-TTWindowManagerSample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B774C82FE3DEE40EFA92902D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E038C0D7F247E3A0FBBE72 /* Pods-TTWindowManagerSample-TTWindowManager-umbrella.h in Headers */,
+				4C5AB34103280E7E96F9D3E0 /* TTWindow.h in Headers */,
+				EFDA4861866179D0C1FDD8CF /* TTWindowManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A3E68DEDAC7859AB8DB851B9 /* Pods-TTWindowManagerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E67B6710DF013E4AB2170AE /* Build configuration list for PBXNativeTarget "Pods-TTWindowManagerSample" */;
+			buildPhases = (
+				8A81E1FA123B0DFC17ED0520 /* Sources */,
+				1F52CA7712AA9AE8C7339555 /* Frameworks */,
+				5A2491997ACA58703793E34A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3471C4D39C698F0858F54995 /* PBXTargetDependency */,
+			);
+			name = "Pods-TTWindowManagerSample";
+			productName = "Pods-TTWindowManagerSample";
+			productReference = E2FA35DFE556ECE306559D31 /* Pods_TTWindowManagerSample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ABFA6B66047AD7A67356D301 /* Pods-TTWindowManagerSample-TTWindowManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146E0B0F5BC8071EE18969D9 /* Build configuration list for PBXNativeTarget "Pods-TTWindowManagerSample-TTWindowManager" */;
+			buildPhases = (
+				0416C3D61B07A6104328A896 /* Sources */,
+				463937BC10D4F8924D3764D2 /* Frameworks */,
+				B774C82FE3DEE40EFA92902D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TTWindowManagerSample-TTWindowManager";
+			productName = "Pods-TTWindowManagerSample-TTWindowManager";
+			productReference = 405A2D64036208683E37CD3B /* TTWindowManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7CDFF1D3E1ED50EAE73C181 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 5D054C7A85665C03105C3EED /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70D21C316C28965394C528C9;
+			productRefGroup = 6C82AEF611A00D81C6961A87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3E68DEDAC7859AB8DB851B9 /* Pods-TTWindowManagerSample */,
+				ABFA6B66047AD7A67356D301 /* Pods-TTWindowManagerSample-TTWindowManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0416C3D61B07A6104328A896 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE487AFA00D980613232205 /* Pods-TTWindowManagerSample-TTWindowManager-dummy.m in Sources */,
+				C231C07E22219FED194A2EA6 /* TTWindow.m in Sources */,
+				957952780A0969A683A84715 /* TTWindowManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A81E1FA123B0DFC17ED0520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6033A91C28C2E5DC795B5B7 /* Pods-TTWindowManagerSample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3471C4D39C698F0858F54995 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TTWindowManagerSample-TTWindowManager";
+			target = ABFA6B66047AD7A67356D301 /* Pods-TTWindowManagerSample-TTWindowManager */;
+			targetProxy = 84ECBCE1172394FF8C622AB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B56AB9EE5F829BDB9B3AF00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DF49E503F5EA1EE10F69E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 647FA8C63A2C29ADA3D94FC9 /* Pods-TTWindowManagerSample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TTWindowManagerSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TTWindowManagerSample/Pods-TTWindowManagerSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TTWindowManagerSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A82777D213B0BBD0B0336D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9123D0835106D3B18797B34A /* Pods-TTWindowManagerSample-TTWindowManager-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TTWindowManagerSample-TTWindowManager/Pods-TTWindowManagerSample-TTWindowManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTWindowManagerSample-TTWindowManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TTWindowManagerSample-TTWindowManager/Pods-TTWindowManagerSample-TTWindowManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TTWindowManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7877F4366FA6A6ADAC1FBE4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9616CEE71DF180475B76BA6D /* Pods-TTWindowManagerSample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TTWindowManagerSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TTWindowManagerSample/Pods-TTWindowManagerSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TTWindowManagerSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDBF996F8BD4C84E9BAE2740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9123D0835106D3B18797B34A /* Pods-TTWindowManagerSample-TTWindowManager-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TTWindowManagerSample-TTWindowManager/Pods-TTWindowManagerSample-TTWindowManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTWindowManagerSample-TTWindowManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-TTWindowManagerSample-TTWindowManager/Pods-TTWindowManagerSample-TTWindowManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TTWindowManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E30D57368C77F88697289C06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		146E0B0F5BC8071EE18969D9 /* Build configuration list for PBXNativeTarget "Pods-TTWindowManagerSample-TTWindowManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDBF996F8BD4C84E9BAE2740 /* Debug */,
+				6A82777D213B0BBD0B0336D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D054C7A85665C03105C3EED /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E30D57368C77F88697289C06 /* Debug */,
+				0B56AB9EE5F829BDB9B3AF00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E67B6710DF013E4AB2170AE /* Build configuration list for PBXNativeTarget "Pods-TTWindowManagerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7877F4366FA6A6ADAC1FBE4B /* Debug */,
+				3DF49E503F5EA1EE10F69E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7CDFF1D3E1ED50EAE73C181 /* Project object */;
+}

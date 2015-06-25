@@ -14,8 +14,7 @@
 		8F64A84F1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A84E1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests.swift */; };
 		8F64A85A1B3B1F4F002D2BE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8581B3B1F4F002D2BE1 /* ViewController.swift */; };
 		8F64A85B1B3B1F4F002D2BE1 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8591B3B1F4F002D2BE1 /* ModalViewController.swift */; };
-		8F64A8681B3B20E1002D2BE1 /* TTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8651B3B20E1002D2BE1 /* TTWindow.m */; };
-		8F64A8691B3B20E1002D2BE1 /* TTWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F64A8671B3B20E1002D2BE1 /* TTWindowManager.m */; };
+		C5EBC2D796D872DCE29972AB /* Pods_TTWindowManagerSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B873D1C23CCA53861A6FBC6D /* Pods_TTWindowManagerSample.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22B024843F409A7E555413D4 /* Pods-TTWindowManagerSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTWindowManagerSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTWindowManagerSample/Pods-TTWindowManagerSample.release.xcconfig"; sourceTree = "<group>"; };
 		8F64A8331B3B1F1D002D2BE1 /* TTWindowManagerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTWindowManagerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F64A8371B3B1F1D002D2BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F64A8381B3B1F1D002D2BE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,10 +41,8 @@
 		8F64A8581B3B1F4F002D2BE1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F64A8591B3B1F4F002D2BE1 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		8F64A8601B3B1FB7002D2BE1 /* TTWindowManagerSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTWindowManagerSample-Bridging-Header.h"; sourceTree = "<group>"; };
-		8F64A8641B3B20E1002D2BE1 /* TTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTWindow.h; path = ../../TTWindowManager/TTWindow.h; sourceTree = "<group>"; };
-		8F64A8651B3B20E1002D2BE1 /* TTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTWindow.m; path = ../../TTWindowManager/TTWindow.m; sourceTree = "<group>"; };
-		8F64A8661B3B20E1002D2BE1 /* TTWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTWindowManager.h; path = ../../TTWindowManager/TTWindowManager.h; sourceTree = "<group>"; };
-		8F64A8671B3B20E1002D2BE1 /* TTWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTWindowManager.m; path = ../../TTWindowManager/TTWindowManager.m; sourceTree = "<group>"; };
+		AF53FCF3D60C685CEE182356 /* Pods-TTWindowManagerSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTWindowManagerSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TTWindowManagerSample/Pods-TTWindowManagerSample.debug.xcconfig"; sourceTree = "<group>"; };
+		B873D1C23CCA53861A6FBC6D /* Pods_TTWindowManagerSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTWindowManagerSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EBC2D796D872DCE29972AB /* Pods_TTWindowManagerSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +70,8 @@
 				8F64A8351B3B1F1D002D2BE1 /* TTWindowManagerSample */,
 				8F64A84B1B3B1F1D002D2BE1 /* TTWindowManagerSampleTests */,
 				8F64A8341B3B1F1D002D2BE1 /* Products */,
+				AA562345D5809028D2644770 /* Pods */,
+				F0A7E16039BE64F6A9E188F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +87,6 @@
 		8F64A8351B3B1F1D002D2BE1 /* TTWindowManagerSample */ = {
 			isa = PBXGroup;
 			children = (
-				8F64A86A1B3B20ED002D2BE1 /* TTWindowManager */,
 				8F64A8381B3B1F1D002D2BE1 /* AppDelegate.swift */,
 				8F64A8581B3B1F4F002D2BE1 /* ViewController.swift */,
 				8F64A8591B3B1F4F002D2BE1 /* ModalViewController.swift */,
@@ -124,15 +124,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F64A86A1B3B20ED002D2BE1 /* TTWindowManager */ = {
+		AA562345D5809028D2644770 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8F64A8641B3B20E1002D2BE1 /* TTWindow.h */,
-				8F64A8651B3B20E1002D2BE1 /* TTWindow.m */,
-				8F64A8661B3B20E1002D2BE1 /* TTWindowManager.h */,
-				8F64A8671B3B20E1002D2BE1 /* TTWindowManager.m */,
+				AF53FCF3D60C685CEE182356 /* Pods-TTWindowManagerSample.debug.xcconfig */,
+				22B024843F409A7E555413D4 /* Pods-TTWindowManagerSample.release.xcconfig */,
 			);
-			name = TTWindowManager;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0A7E16039BE64F6A9E188F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B873D1C23CCA53861A6FBC6D /* Pods_TTWindowManagerSample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F64A8521B3B1F1D002D2BE1 /* Build configuration list for PBXNativeTarget "TTWindowManagerSample" */;
 			buildPhases = (
+				46A2433044BE2C44D0346E0D /* Check Pods Manifest.lock */,
 				8F64A82F1B3B1F1D002D2BE1 /* Sources */,
 				8F64A8301B3B1F1D002D2BE1 /* Frameworks */,
 				8F64A8311B3B1F1D002D2BE1 /* Resources */,
+				85BED18A27E464F04FF8750E /* Embed Pods Frameworks */,
+				7413B3B7886C4F23C6B88DCB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,16 +239,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46A2433044BE2C44D0346E0D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7413B3B7886C4F23C6B88DCB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TTWindowManagerSample/Pods-TTWindowManagerSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85BED18A27E464F04FF8750E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TTWindowManagerSample/Pods-TTWindowManagerSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F64A82F1B3B1F1D002D2BE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8F64A85A1B3B1F4F002D2BE1 /* ViewController.swift in Sources */,
-				8F64A8681B3B20E1002D2BE1 /* TTWindow.m in Sources */,
 				8F64A85B1B3B1F4F002D2BE1 /* ModalViewController.swift in Sources */,
 				8F64A8391B3B1F1D002D2BE1 /* AppDelegate.swift in Sources */,
-				8F64A8691B3B20E1002D2BE1 /* TTWindowManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +421,7 @@
 		};
 		8F64A8531B3B1F1D002D2BE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF53FCF3D60C685CEE182356 /* Pods-TTWindowManagerSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -379,6 +435,7 @@
 		};
 		8F64A8541B3B1F1D002D2BE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B024843F409A7E555413D4 /* Pods-TTWindowManagerSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -442,6 +499,7 @@
 				8F64A8541B3B1F1D002D2BE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F64A8551B3B1F1D002D2BE1 /* Build configuration list for PBXNativeTarget "TTWindowManagerSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +508,7 @@
 				8F64A8571B3B1F1D002D2BE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
