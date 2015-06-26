@@ -1,6 +1,0 @@
-framework module TTWindowManager {
-  umbrella header "Pods-TTWindowManagerSample-TTWindowManager-umbrella.h"
-
-  export *
-  module * { export * }
-}

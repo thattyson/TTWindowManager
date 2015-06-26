@@ -1,11 +1,5 @@
 platform :ios, '8.0'
-use_frameworks!
 
-target 'TTWindowManagerSample' do
-	pod 'TTWindowManager'
-end
-
-target 'TTWindowManagerSampleTests' do
-
-end
+link_with 'TTWindowManagerSample', 'TTWindowManagerSampleTests'
+pod 'TTWindowManager'
 
