@@ -33,6 +33,15 @@ typedef enum {
     return sharedInstance;
 }
 
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        [self listenForDebuggerPauseResume];
+    }
+    
+    return self;
+}
+
 
 #pragma mark - Presentation
 
@@ -51,7 +60,7 @@ typedef enum {
     TTWindow *windowToPresent = [self windowForPosition:position];
     windowToPresent.animationType = animation;
     
-    NSAssert(![windowToPresent isPresented], @"Attempting to display %@ when a viewController is already being displayed for window position %lu", viewController, position);
+    NSAssert(![windowToPresent isPresented], @"Attempting to display %@ when a viewController is already being displayed for window position %lu", viewController, (unsigned long)position);
     
     windowToPresent.rootViewController = viewController;
     [self displayWindow:windowToPresent completion:completion];
@@ -131,6 +140,10 @@ typedef enum {
     return topPresentedWindow;
 }
 
+- (void)setBackgroundColor:(UIColor *)color {
+    self.backgroundAnimationWindow.backgroundColor = color;
+}
+
 
 #pragma mark - Animation
 
@@ -139,7 +152,7 @@ typedef enum {
     
     if (!_backgroundAnimationWindow) {
         _backgroundAnimationWindow = [[TTWindow alloc]init];
-        _backgroundAnimationWindow.backgroundColor = [UIColor blackColor];
+        _backgroundAnimationWindow.backgroundColor = [UIColor whiteColor];
         
     }
     
@@ -349,5 +362,39 @@ typedef enum {
     
     if (completion)completion(YES);
 }
+
+
+
+
+#pragma mark - Debugger Paused/Resumed
+
+/*!
+ Initiate listener for debugger pause/resume
+ */
+- (void)listenForDebuggerPauseResume {
+    
+#if DEBUG
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    
+    static dispatch_source_t source = nil;
+    __typeof(self) __weak weakSelf = self;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        source = dispatch_source_create(DISPATCH_SOURCE_TYPE_SIGNAL, SIGSTOP, 0, queue);
+        
+        if (source) {
+            dispatch_source_set_event_handler(source, ^{
+                if (weakSelf.debuggerPauseCallback) {
+                    weakSelf.debuggerPauseCallback(YES);
+                }
+            });
+            dispatch_resume(source);
+        }
+    });
+#endif
+}
+
 
 @end

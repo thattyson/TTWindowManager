@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="160-DB-0oH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="160-DB-0oH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="6lZ-Hw-EMM">
             <objects>
-                <viewController id="160-DB-0oH" customClass="ViewController" customModule="TTWindowManager_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="160-DB-0oH" customClass="ViewController" customModule="TTWindowManagerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oNO-Uc-w6L"/>
                         <viewControllerLayoutGuide type="bottom" id="Efi-aw-AH6"/>
@@ -17,8 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwG-tK-cP7">
-                                <rect key="frame" x="252" y="285" width="96" height="30"/>
-                                <state key="normal" title="Show window">
+                                <rect key="frame" x="209" y="282" width="181" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Show Modal Window">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -26,7 +28,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2627450980392157" green="0.76470588235294112" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="lwG-tK-cP7" secondAttribute="centerX" id="Olf-PE-wga"/>
                             <constraint firstAttribute="centerY" secondItem="lwG-tK-cP7" secondAttribute="centerY" id="YDF-Ot-A1S"/>
@@ -40,7 +42,7 @@
         <!--Modal View Controller-->
         <scene sceneID="jMt-Kb-2Q6">
             <objects>
-                <viewController storyboardIdentifier="ModalViewController" id="MOq-ue-uOg" customClass="ModalViewController" customModule="TTWindowManager_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalViewController" id="MOq-ue-uOg" customClass="ModalViewController" customModule="TTWindowManagerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3hf-Ij-K82"/>
                         <viewControllerLayoutGuide type="bottom" id="TqF-Xr-sKP"/>
@@ -50,8 +52,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iG3-uU-iQP">
-                                <rect key="frame" x="278" y="285" width="44" height="30"/>
+                                <rect key="frame" x="272.5" y="282" width="54" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Close!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -59,7 +63,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94386222559676025" green="0.44313725490196076" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="iG3-uU-iQP" secondAttribute="centerX" id="A9I-tR-6Q7"/>
                             <constraint firstAttribute="centerY" secondItem="iG3-uU-iQP" secondAttribute="centerY" id="M1w-xr-vV9"/>

@@ -21,18 +21,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        //Important to ensure the window is properly sized
+        //Important to ensure the window is properly sized on launch
         self.window?.frame = UIScreen.mainScreen().bounds
         return true
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
         (self.window as! TTWindow).shakeGestureCallback = { () -> Void in
+            
             //Display something on shake
             println("Shake!")
         }
+        
+        
+        //This is fired whenever you pause the debugger and will only ever be called in DEBUG builds
+        TTWindowManager.sharedInstance().debuggerPauseCallback = { () -> Void in
+            
+            //Print important info to the console or add a breakpoint here and read any values you need
+            println("Hi, I am: \(self.debugDescription)")
+        }
+        
         return true
     }
     
