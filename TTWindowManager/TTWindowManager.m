@@ -13,7 +13,11 @@ typedef enum {
     TTAnimationDirectionPop
 }TTAnimationDirection;
 
-@interface TTWindowManager ()
+@interface TTWindowManager () {
+    UIImageView *_backgroundAnimationWindowImage;
+    UIImageView *_thumbnailImageView;
+    UIView *_thumbnailImageSource;
+}
 
 @property (nonatomic, strong) NSMutableDictionary *windows;
 @property (nonatomic, strong) TTWindow *backgroundAnimationWindow;
@@ -37,9 +41,25 @@ typedef enum {
     
     if (self = [super init]) {
         [self listenForDebuggerPauseResume];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(screenDidRotate) name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
     }
     
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+- (void)screenDidRotate {
+    if (_thumbnailImageSource && _thumbnailImageView) {
+        _thumbnailImageSource.alpha = 1;
+        _thumbnailImageView.image = [self.class screenshot:_thumbnailImageSource];
+        _thumbnailImageSource.alpha = 0;
+        
+        [self scaleDownThumbnail];
+//        _thumbnailImageView.center = CGPointMake(_thumbnailImageSource.bounds.size.width, _thumbnailImageSource.center.y);
+    }
 }
 
 
@@ -56,6 +76,10 @@ typedef enum {
 }
 
 - (void)presentViewController:(UIViewController *)viewController atWindowPosition:(TTWindowPosition)position withAnimation:(TTWindowAnimationType)animation completion:(TTWindowBOOLCompletion)completion {
+    
+    if (animation == TTWindowAnimationTypeScaleDown) {
+        position = TTWindowPositionBehind;
+    }
     
     TTWindow *windowToPresent = [self windowForPosition:position];
     windowToPresent.animationType = animation;
@@ -78,6 +102,14 @@ typedef enum {
     
     TTWindow *windowToDismiss = [self windowForPosition:position];
     [self hideWindow:windowToDismiss completion:completion];
+}
+
+- (void)dismissTopWindowWithCompletion:(TTWindowBOOLCompletion)completion {
+    
+    UIWindow *windowToDismiss = [self topVisibleWindow];
+    if ([windowToDismiss isKindOfClass:[TTWindow class]]) {
+        [self hideWindow:(TTWindow*)windowToDismiss completion:completion];
+    }
 }
 
 
@@ -142,27 +174,44 @@ typedef enum {
 
 - (void)setBackgroundColor:(UIColor *)color {
     self.backgroundAnimationWindow.backgroundColor = color;
+    [self setBackgroundImage:nil];
+}
+
+
+- (void)setBackgroundImage:(UIImage *)image {
+    
+    if (!_backgroundAnimationWindowImage) {
+        _backgroundAnimationWindowImage = [[UIImageView alloc]init];
+        _backgroundAnimationWindowImage.frame = self.backgroundAnimationWindow.rootViewController.view.bounds;
+        _backgroundAnimationWindowImage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _backgroundAnimationWindowImage.contentMode = UIViewContentModeScaleAspectFill;
+        [self.backgroundAnimationWindow.rootViewController.view addSubview:_backgroundAnimationWindowImage];
+    }
+    
+    _backgroundAnimationWindowImage.image = image;
 }
 
 
 #pragma mark - Animation
 
-//TODO: add an optional image for the background view instead of strictly black
 - (TTWindow *)backgroundAnimationWindow {
     
     if (!_backgroundAnimationWindow) {
-        _backgroundAnimationWindow = [[TTWindow alloc]init];
+        _backgroundAnimationWindow = [[TTWindow alloc]initWithWindowPosition:TTWindowPositionBackground];
+        UIViewController *viewCon = [[UIViewController alloc]init];
+        viewCon.view.frame = _backgroundAnimationWindow.bounds;
+        viewCon.view.backgroundColor = [UIColor clearColor];
+        viewCon.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        _backgroundAnimationWindow.rootViewController = viewCon;
         _backgroundAnimationWindow.backgroundColor = [UIColor whiteColor];
-        
     }
     
     return _backgroundAnimationWindow;
 }
 
-- (void)displayBackgroundAnimationWindowBelowWindow:(UIWindow*)window {
+- (void)displayBackgroundAnimationWindow {
     
     if (![self backgroundAnimationWindow].isPresented) {
-        [[self backgroundAnimationWindow] setWindowLevel:window.windowLevel - 1];
         [[self backgroundAnimationWindow] makeKeyAndVisible];
         [self backgroundAnimationWindow].isPresented = YES;
     }
@@ -190,6 +239,8 @@ typedef enum {
                 window.shakeGestureCallback = ttWindow.shakeGestureCallback;
             }
         }
+        
+        [window willDisplay];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -272,6 +323,10 @@ typedef enum {
             [self normalizeIncomingWindow:incomingWindow andOutgoingWindow:outgoingWindow withDirection:direction completion:completion];
             break;
             
+        case TTWindowAnimationTypeScaleDown:
+            [self scaleDownIncomingWindow:incomingWindow andOutgoingWindow:outgoingWindow withDirection:direction completion:completion];
+            break;
+            
         default:
             break;
     }
@@ -299,7 +354,7 @@ typedef enum {
 }
 
 - (void)modalIncomingWindow:(TTWindow*)incomingWindow andOutgoingWindow:(UIWindow*)outgoingWindow withDirection:(TTAnimationDirection)direction completion:(TTWindowBOOLCompletion)completion {
-    [self displayBackgroundAnimationWindowBelowWindow:outgoingWindow];
+    [self displayBackgroundAnimationWindow];
     
     CGRect finalFrame = incomingWindow.frame;
     CGRect dismissedFrame = incomingWindow.bounds;
@@ -345,6 +400,66 @@ typedef enum {
     }];
 }
 
+- (void)scaleDownIncomingWindow:(TTWindow*)incomingWindow andOutgoingWindow:(UIWindow*)outgoingWindow withDirection:(TTAnimationDirection)direction completion:(TTWindowBOOLCompletion)completion {
+    
+    
+    if (direction == TTAnimationDirectionPush) {
+        
+        [incomingWindow setHidden:NO];
+        incomingWindow.windowLevel = outgoingWindow.windowLevel-1;
+        outgoingWindow.userInteractionEnabled = false;
+        outgoingWindow.backgroundColor = [UIColor clearColor];
+        UIImage *image = [self.class screenshot:outgoingWindow];
+        
+        _thumbnailImageView = nil;
+        _thumbnailImageView = [[UIImageView alloc]initWithImage:image];
+        _thumbnailImageView.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(thumbnailImageTapped)];
+        [_thumbnailImageView addGestureRecognizer:tapGesture];
+        [incomingWindow addSubview:_thumbnailImageView];
+        _thumbnailImageSource = outgoingWindow;
+        
+        outgoingWindow.alpha = 0;
+    } else {
+        
+        outgoingWindow.userInteractionEnabled = true;
+    }
+    
+    
+    
+    [UIView animateKeyframesWithDuration:0.3 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubicPaced animations:^{
+        
+        if (direction == TTAnimationDirectionPush) {
+            
+            [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:1 animations:^{
+                [self scaleDownThumbnail];
+            }];
+        } else if (direction == TTAnimationDirectionPop) {
+            
+            [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:1 animations:^{
+                _thumbnailImageView.frame = CGRectMake(0, 0, outgoingWindow.bounds.size.width, outgoingWindow.bounds.size.height);
+                _thumbnailImageView.center = CGPointMake(outgoingWindow.bounds.size.width * .5, outgoingWindow.bounds.size.height * .5);
+            }];
+        }
+    } completion:^(BOOL finished) {
+    
+        if (direction == TTAnimationDirectionPop) {
+            outgoingWindow.alpha = 1.0;
+            [_thumbnailImageView removeFromSuperview];
+            _thumbnailImageView = nil;
+            _thumbnailImageSource = nil;
+        }
+        [self normalizeIncomingWindow:incomingWindow andOutgoingWindow:outgoingWindow withDirection:direction completion:completion];
+    }];
+}
+
+- (void)scaleDownThumbnail {
+    
+    _thumbnailImageView.frame = CGRectMake(0, 0, _thumbnailImageView.image.size.width * .5, _thumbnailImageView.image.size.height * .5);
+    _thumbnailImageView.center = CGPointMake(_thumbnailImageSource.frame.size.width, _thumbnailImageSource.frame.size.height * 0.5);
+}
+
 - (void)normalizeIncomingWindow:(TTWindow*)incomingWindow andOutgoingWindow:(UIWindow*)outgoingWindow withDirection:(TTAnimationDirection)direction completion:(TTWindowBOOLCompletion)completion {
     
     if (direction == TTAnimationDirectionPush) {
@@ -357,13 +472,28 @@ typedef enum {
         incomingWindow.hidden = YES;
         incomingWindow.rootViewController = nil;
         incomingWindow.isPresented = NO;
+        incomingWindow.alpha = 1;
         [outgoingWindow makeKeyAndVisible];
     }
     
     if (completion)completion(YES);
 }
 
+- (void)thumbnailImageTapped {
+    [self dismissViewControllerAtWindowPosition:TTWindowPositionBehind];
+}
 
+
++ (UIImage *)screenshot:(UIView *)view {
+    
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
 
 
 #pragma mark - Debugger Paused/Resumed

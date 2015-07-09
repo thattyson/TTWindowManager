@@ -36,6 +36,7 @@
 - (void)genericInit {
     
     self.clipsToBounds = YES;
+    _supportedOrientation = UIInterfaceOrientationMaskAll;
 }
 
 - (void)setWindowPosition:(TTWindowPosition)windowPosition {
@@ -44,7 +45,10 @@
         return;
     }
     _windowPosition = windowPosition;
-    
+    [self willDisplay];
+}
+
+- (void)willDisplay {
     [self setWindowLevel:[self.class windowLevelForPosition:_windowPosition]];
 }
 
@@ -72,6 +76,14 @@
             
         case TTWindowPositionStatusBar:
             return UIWindowLevelStatusBar + 1;
+            break;
+            
+        case TTWindowPositionBackground:
+            return UIWindowLevelNormal - 1;
+            break;
+            
+        case TTWindowPositionBehind:
+            return UIWindowLevelNormal;
             break;
             
             

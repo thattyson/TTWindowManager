@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    //    var window: UIWindow?
+//    var window: UIWindow?
     //Replace default with TTWindow override
     var window : UIWindow? = {
         let window = TTWindow()
@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Important to ensure the window is properly sized on launch
         self.window?.frame = UIScreen.mainScreen().bounds
+        self.window?.backgroundColor = UIColor.purpleColor()
         return true
     }
     
@@ -45,5 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> Int {
+        
+        if let ttWindow = window as? TTWindow {
+            return Int(ttWindow.supportedOrientation.rawValue)
+        }
+        
+        return Int(UIInterfaceOrientationMask.All.rawValue);
+    }
 }
 

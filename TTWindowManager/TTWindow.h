@@ -16,11 +16,13 @@ typedef void(^TTWindowBasicCompletion)();
  @note window position can be presented above native elements like UIAlert and UIStatusBar. You can get some great effects through this like presenting a loading message above the status bar or a dismissable detail message over a UIAlert.
  */
 typedef NS_ENUM(NSUInteger, TTWindowPosition) {
+    TTWindowPositionBackground = 1,
     TTWindowPositionModal = 100,
     TTWindowPositionTop = 140,
     TTWindowPositionDebug = 180,
     TTWindowPositionAlert = 220,
-    TTWindowPositionStatusBar = 260
+    TTWindowPositionStatusBar = 260,
+    TTWindowPositionBehind = 300
 };
 
 /*!
@@ -30,7 +32,8 @@ typedef NS_ENUM(NSUInteger, TTWindowAnimationType) {
     TTWindowAnimationTypeNone,
     TTWindowAnimationTypeDefault,
     TTWindowAnimationTypeModal,
-    TTWindowAnimationTypeFade
+    TTWindowAnimationTypeFade,
+    TTWindowAnimationTypeScaleDown
 };
 
 
@@ -56,6 +59,14 @@ typedef NS_ENUM(NSUInteger, TTWindowAnimationType) {
 @property (nonatomic) BOOL isPresented;
 
 /*!
+ The supported orientation for the window. Default is All
+ */
+@property (nonatomic) UIInterfaceOrientationMask supportedOrientation;
+
+
+@property (nonatomic, weak) UIImageView *screenshot;
+
+/*!
  An optional block callback fired when the user shakes their device
  */
 @property (nonatomic, strong) TTWindowBasicCompletion shakeGestureCallback;
@@ -64,5 +75,11 @@ typedef NS_ENUM(NSUInteger, TTWindowAnimationType) {
  @return an instance of TTWindow initialized with the provided window position
  */
 - (instancetype)initWithWindowPosition:(TTWindowPosition)position;
+
+/*!
+ Updates the window position if it has changed
+ */
+- (void)willDisplay;
+
 
 @end

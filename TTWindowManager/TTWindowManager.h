@@ -37,8 +37,17 @@ typedef void(^TTWindowBOOLCompletion)(BOOL successful);
  */
 - (UIWindow *)topVisibleWindow;
 
-
+/*!
+ Sets the specified color as the background animation windows background color
+ 
+ @note This removes any background image that has been applied
+ */
 - (void)setBackgroundColor:(UIColor *)color;
+
+/*!
+ Adds the specified image to the background animation window
+ */
+- (void)setBackgroundImage:(UIImage *)image;
 
 
 
@@ -65,6 +74,9 @@ typedef void(^TTWindowBOOLCompletion)(BOOL successful);
  Dismisses the window and all views at the provided z position with a block completion callback.
  */
 - (void)dismissViewControllerAtWindowPosition:(TTWindowPosition)position completion:(TTWindowBOOLCompletion)completion;
+
+
+- (void)dismissTopWindowWithCompletion:(TTWindowBOOLCompletion)completion;
 
 
 
