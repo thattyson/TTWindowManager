@@ -31,7 +31,6 @@ class ModalViewController: UIViewController {
     }
     
     @IBAction func colorControllerChanged(sender: UISegmentedControl) {
-        
         updateBackgroundColorForSelection(sender.selectedSegmentIndex)
     }
     

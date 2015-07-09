@@ -269,42 +269,12 @@ typedef enum {
             
             [self animateIncomingWindow:window andOutgoingWindow:previousWindow withAnimationType:window.animationType andDirection:TTAnimationDirectionPop completion:^(BOOL successful) {
                 
-                [self notifyWindowWillAppear:(TTWindow*)previousWindow];
-                [self notifyWindowDidAppear:(TTWindow*)previousWindow];
                 if (completion) completion(successful);
             }];
         });
     } else {
         
         if (completion)completion(NO);
-    }
-}
-
-- (void)notifyWindowWillAppear:(TTWindow*)window {
-    
-    if (![window isKindOfClass:[TTWindow class]]) return;
-    
-    [window.rootViewController viewWillAppear:(window.animationType != TTWindowAnimationTypeNone)];
-    if ([window.rootViewController isKindOfClass:[UINavigationController class]]) {
-        
-        if (((UINavigationController*)window.rootViewController).topViewController) {
-            
-            [((UINavigationController*)window.rootViewController).topViewController viewWillAppear:(window.animationType != TTWindowAnimationTypeNone)];
-        }
-    }
-}
-
-- (void)notifyWindowDidAppear:(TTWindow*)window {
-    
-    if (![window isKindOfClass:[TTWindow class]]) return;
-    
-    [window.rootViewController viewDidAppear:(window.animationType != TTWindowAnimationTypeNone)];
-    if ([window.rootViewController isKindOfClass:[UINavigationController class]]) {
-        
-        if (((UINavigationController*)window.rootViewController).topViewController) {
-            
-            [((UINavigationController*)window.rootViewController).topViewController viewDidAppear:(window.animationType != TTWindowAnimationTypeNone)];
-        }
     }
 }
 

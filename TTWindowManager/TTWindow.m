@@ -39,6 +39,33 @@
     _supportedOrientation = UIInterfaceOrientationMaskAll;
 }
 
+- (void)becomeKeyWindow {
+    
+    [super becomeKeyWindow];
+    
+    [self.rootViewController viewWillAppear:NO];
+    [self.rootViewController viewDidAppear:NO];
+    [self.class recursiveLayout:self.rootViewController];
+}
+
++ (void)recursiveLayout:(UIViewController*)controller {
+    
+    if (!controller) return;
+    
+    [controller.view setNeedsLayout];
+    
+    for (UIViewController *subController in controller.childViewControllers) {
+        [self recursiveLayout:subController];
+    }
+}
+
+- (void)resignKeyWindow {
+    
+    [super resignKeyWindow];
+    [self.rootViewController viewWillDisappear:NO];
+    [self.rootViewController viewDidDisappear:NO];
+}
+
 - (void)setWindowPosition:(TTWindowPosition)windowPosition {
     
     if (_windowPosition == windowPosition) {
