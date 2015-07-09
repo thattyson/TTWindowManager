@@ -17,6 +17,7 @@ typedef enum {
     UIImageView *_backgroundAnimationWindowImage;
     UIImageView *_thumbnailImageView;
     UIView *_thumbnailImageSource;
+    UIWindowLevel _backgroundAnimationWindowLevel;
 }
 
 @property (nonatomic, strong) NSMutableDictionary *windows;
@@ -53,13 +54,16 @@ typedef enum {
 
 - (void)screenDidRotate {
     if (_thumbnailImageSource && _thumbnailImageView) {
-        _thumbnailImageSource.alpha = 1;
-        _thumbnailImageView.image = [self.class screenshot:_thumbnailImageSource];
-        _thumbnailImageSource.alpha = 0;
         
-        [self scaleDownThumbnail];
-//        _thumbnailImageView.center = CGPointMake(_thumbnailImageSource.bounds.size.width, _thumbnailImageSource.center.y);
+        [self updateThumbnail];
+        [self performSelector:@selector(updateThumbnail) withObject:nil afterDelay:.3];
     }
+}
+
+- (void)updateThumbnail {
+    
+    _thumbnailImageView.image = [self.class screenshot:_thumbnailImageSource];
+    [self scaleDownThumbnail];
 }
 
 
@@ -408,7 +412,6 @@ typedef enum {
         [incomingWindow setHidden:NO];
         incomingWindow.windowLevel = outgoingWindow.windowLevel-1;
         outgoingWindow.userInteractionEnabled = false;
-        outgoingWindow.backgroundColor = [UIColor clearColor];
         UIImage *image = [self.class screenshot:outgoingWindow];
         
         _thumbnailImageView = nil;
@@ -420,7 +423,8 @@ typedef enum {
         [incomingWindow addSubview:_thumbnailImageView];
         _thumbnailImageSource = outgoingWindow;
         
-        outgoingWindow.alpha = 0;
+        _backgroundAnimationWindowLevel = outgoingWindow.windowLevel;
+        outgoingWindow.windowLevel = -100;
     } else {
         
         outgoingWindow.userInteractionEnabled = true;
@@ -445,10 +449,12 @@ typedef enum {
     } completion:^(BOOL finished) {
     
         if (direction == TTAnimationDirectionPop) {
-            outgoingWindow.alpha = 1.0;
+            outgoingWindow.windowLevel = _backgroundAnimationWindowLevel;
             [_thumbnailImageView removeFromSuperview];
             _thumbnailImageView = nil;
             _thumbnailImageSource = nil;
+        } else {
+            [self updateThumbnail];
         }
         [self normalizeIncomingWindow:incomingWindow andOutgoingWindow:outgoingWindow withDirection:direction completion:completion];
     }];
@@ -486,13 +492,11 @@ typedef enum {
 
 + (UIImage *)screenshot:(UIView *)view {
     
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    
-    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0);
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:NO];
+    UIImage *im = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    return img;
+    return im;
 }
 
 
