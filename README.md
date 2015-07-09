@@ -10,6 +10,9 @@ A simple window presentation manager for iOS written in objective-c which takes 
 > I wrote TTWindowManager before swift existed. 
 > I haven't converted it but have now fully embraced swift so I'm exclusively showing swift implementation.
 
+
+![TTWindowManagerTransitionSample Animation](https://raw.github.com/thattyson/TTWindowManager/master/TTWindowManagerTransitionSample.gif)
+
 ## Installation
 
 ### Cocoapods
