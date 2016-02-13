@@ -15,7 +15,7 @@ A simple window presentation manager for iOS written in objective-c which takes 
 
 ## Installation
 
-### Cocoapods
+### CocoaPods
 
 Add the following to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
